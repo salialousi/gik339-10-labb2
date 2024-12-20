@@ -1,0 +1,80 @@
+
+body {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  margin: 20px;
+  background-color: #ffeefc;
+  color: #333;
+}
+
+
+h1 {
+  text-align: center;
+  color: #ff6fb5;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.8);
+  margin-bottom: 30px;
+}
+
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 3px solid #ffbde6;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff5fc;
+  overflow: hidden;
+}
+
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1rem;
+  border-bottom: 2px dashed #ffbde6;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out; 
+}
+
+
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+
+.user-list li:hover {
+  background-color: #ffdff2;
+  transform: scale(1.03); 
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+
+.user-list li::before {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  position: absolute;
+  left: 10px;
+}
+
+
+.user-list li span:last-child {
+  color: #ff6fb5; 
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
